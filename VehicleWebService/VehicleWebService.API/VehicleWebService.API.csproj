@@ -119,7 +119,24 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201605242317388_intial.cs" />
+    <Compile Include="Migrations\201605242317388_intial.Designer.cs">
+      <DependentUpon>201605242317388_intial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VehicleWebServiceDataContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VehicleWebService.CORE\VehicleWebService.CORE.csproj">
+      <Project>{9c4c343a-a60b-4c89-abb7-0b8455dfed9f}</Project>
+      <Name>VehicleWebService.CORE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201605242317388_intial.resx">
+      <DependentUpon>201605242317388_intial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
