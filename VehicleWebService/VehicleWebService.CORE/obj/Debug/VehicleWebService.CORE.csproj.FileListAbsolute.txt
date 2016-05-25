@@ -1,11 +1,9 @@
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\VehicleWebService.CORE.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\VehicleWebService.CORE.pdb
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\AutoMapper.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\Newtonsoft.Json.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\System.Net.Http.Formatting.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\System.Web.Http.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\System.Web.Http.WebHost.dll
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\AutoMapper.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\Newtonsoft.Json.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\System.Net.Http.Formatting.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.CORE\bin\Debug\System.Web.Http.xml

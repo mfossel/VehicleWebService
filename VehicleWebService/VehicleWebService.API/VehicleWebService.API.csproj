@@ -148,7 +148,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VehicleWebServiceDataContext.cs" />
+    <Compile Include="Data\VehicleWebServiceDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VehicleWebService.CORE\VehicleWebService.CORE.csproj">
