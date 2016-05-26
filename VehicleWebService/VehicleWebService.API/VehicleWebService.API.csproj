@@ -142,9 +142,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605242317388_intial.cs" />
-    <Compile Include="Migrations\201605242317388_intial.Designer.cs">
-      <DependentUpon>201605242317388_intial.cs</DependentUpon>
+    <Compile Include="Migrations\201605260304166_initial.cs" />
+    <Compile Include="Migrations\201605260304166_initial.Designer.cs">
+      <DependentUpon>201605260304166_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,12 +157,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605242317388_intial.resx">
-      <DependentUpon>201605242317388_intial.cs</DependentUpon>
-    </EmbeddedResource>
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <EmbeddedResource Include="Migrations\201605260304166_initial.resx">
+      <DependentUpon>201605260304166_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

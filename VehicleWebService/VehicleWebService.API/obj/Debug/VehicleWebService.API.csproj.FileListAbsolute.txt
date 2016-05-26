@@ -37,8 +37,6 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.C
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.csprojResolveAssemblyReference.cache
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.pdb
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.Migrations.intial.resources
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.csproj.GenerateResource.Cache
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Newtonsoft.Json.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Net.Http.Formatting.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.dll
@@ -47,3 +45,5 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Newtonsoft.
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Net.Http.Formatting.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.WebHost.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.Migrations.initial.resources
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.csproj.GenerateResource.Cache

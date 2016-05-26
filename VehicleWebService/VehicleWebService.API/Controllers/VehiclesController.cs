@@ -18,9 +18,14 @@ namespace VehicleWebService.API.Controllers
         private VehicleWebServiceDataContext db = new VehicleWebServiceDataContext();
 
         // GET: api/Vehicles
-        public IQueryable<Vehicle> GetVehicles()
+        public IQueryable<Vehicle> GetVehicles(string make, string model)
         {
-            return db.Vehicles;
+            IQueryable<Vehicle> vehicles = db.Vehicles;
+
+            if (!string.IsNullOrEmpty(make)) vehicles = vehicles.Where(v => v.Make == make);
+
+            return vehicles;
+
         }
 
         // GET: api/Vehicles/5
