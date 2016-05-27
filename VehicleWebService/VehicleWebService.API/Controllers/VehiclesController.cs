@@ -1,28 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using StackExchange.Redis;
 using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using VehicleWebService.API;
 using VehicleWebService.CORE;
 
 namespace VehicleWebService.API.Controllers
 {
     public class VehiclesController : ApiController
     {
-        private VehicleWebServiceDataContext db = new VehicleWebServiceDataContext();
+        //private VehicleWebServiceDataContext db = new VehicleWebServiceDataContext();
+
+      
+
 
         // GET: api/Vehicles
         public IQueryable<Vehicle> GetVehicles(string make, string model)
         {
             IQueryable<Vehicle> vehicles = db.Vehicles;
 
+            // Check for Vehicle make input
             if (!string.IsNullOrEmpty(make)) vehicles = vehicles.Where(v => v.Make == make);
+
+            // Check for Vehicle model input
+            if (!string.IsNullOrEmpty(model)) vehicles = vehicles.Where(v => v.Model == model);
+
 
             return vehicles;
 

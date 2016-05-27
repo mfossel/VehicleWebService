@@ -9,6 +9,7 @@ namespace VehicleWebService.CORE
 
         public int Id { get; set; }
 
+        //Data annotations to validate incoming data
         [Range(1950,2050,ErrorMessage = "The year must be between 1950 and 2050")]
         public int Year { get; set; }
 
