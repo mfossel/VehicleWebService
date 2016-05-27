@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleWebService.CORE", "VehicleWebService.CORE\VehicleWebService.CORE.csproj", "{9C4C343A-A60B-4C89-ABB7-0B8455DFED9F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleWebService.API", "VehicleWebService.API\VehicleWebService.API.csproj", "{029F9B2C-7516-40CA-9134-EA793886FF7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleWebService.API.Tests", "VehicleWebService.API.Tests\VehicleWebService.API.Tests.csproj", "{6768CD03-273F-4D7A-B4E3-46D16B256A03}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C4C343A-A60B-4C89-ABB7-0B8455DFED9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C4C343A-A60B-4C89-ABB7-0B8455DFED9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C4C343A-A60B-4C89-ABB7-0B8455DFED9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C4C343A-A60B-4C89-ABB7-0B8455DFED9F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{029F9B2C-7516-40CA-9134-EA793886FF7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{029F9B2C-7516-40CA-9134-EA793886FF7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{029F9B2C-7516-40CA-9134-EA793886FF7E}.Release|Any CPU.ActiveCfg = Release|Any CPU

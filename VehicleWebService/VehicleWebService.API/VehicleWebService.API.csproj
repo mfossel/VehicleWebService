@@ -151,20 +151,16 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\VehiclesController.cs" />
+    <Compile Include="Data\IVehicleRepository.cs" />
+    <Compile Include="Data\VehicleRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\VehicleWebService.CORE\VehicleWebService.CORE.csproj">
-      <Project>{9c4c343a-a60b-4c89-abb7-0b8455dfed9f}</Project>
-      <Name>VehicleWebService.CORE</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
