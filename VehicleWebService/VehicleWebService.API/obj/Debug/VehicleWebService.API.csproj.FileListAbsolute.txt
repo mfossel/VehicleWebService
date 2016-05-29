@@ -49,3 +49,7 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStac
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Text.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\StackExchange.Redis.pdb
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\StackExchange.Redis.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Autofac.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Autofac.Integration.WebApi.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Autofac.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Autofac.Integration.WebApi.xml
