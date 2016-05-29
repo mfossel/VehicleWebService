@@ -17,7 +17,6 @@ namespace VehicleWebService.API.Data
             _redisClient = redisClient;
         }
 
-        //Create
 
         public Vehicle Add(Vehicle vehicle)
         {
@@ -26,7 +25,7 @@ namespace VehicleWebService.API.Data
             return typedClient.Store(vehicle);
         }
 
-        //Retrieve
+
         public Vehicle Get(int id)
         {
             var typedClient = _redisClient.As<Vehicle>();
@@ -36,19 +35,20 @@ namespace VehicleWebService.API.Data
         
         public IList<Vehicle> GetAll()
         {
-            throw new NotImplementedException();
+            var typedClient = _redisClient.As<Vehicle>();
+
+            return typedClient.GetAll();
         }
 
         public void Delete(Vehicle vehicle)
         {
-            throw new NotImplementedException();
-        }
+            var typedClient = _redisClient.As<Vehicle>();
 
-     
+            typedClient.Delete(vehicle);
 
-        public void Update(Vehicle vehicle)
-        {
-            throw new NotImplementedException();
-        }
+        }    
+
+
+
     }
 }
