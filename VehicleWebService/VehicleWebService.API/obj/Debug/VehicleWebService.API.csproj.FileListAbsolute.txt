@@ -14,8 +14,6 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\roslyn\VBCS
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\VehicleWebService.API.dll.config
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\VehicleWebService.API.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\VehicleWebService.API.pdb
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\EntityFramework.dll
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\EntityFramework.SqlServer.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.Agent.Intercept.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.DependencyCollector.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -24,10 +22,6 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.A
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.WindowsServer.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.ApplicationInsights.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\VehicleWebService.CORE.dll
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\VehicleWebService.CORE.pdb
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\EntityFramework.xml
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\EntityFramework.SqlServer.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.DependencyCollector.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.AI.Web.xml
@@ -45,5 +39,13 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Newtonsoft.
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Net.Http.Formatting.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.WebHost.xml
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.Migrations.initial.resources
-C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Debug\VehicleWebService.API.csproj.GenerateResource.Cache
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Common.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Interfaces.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Redis.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Text.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\StackExchange.Redis.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Common.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Redis.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\ServiceStack.Text.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\StackExchange.Redis.pdb
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\StackExchange.Redis.xml
