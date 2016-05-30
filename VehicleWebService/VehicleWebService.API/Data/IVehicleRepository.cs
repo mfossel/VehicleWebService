@@ -17,7 +17,7 @@ namespace VehicleWebService.API.Data
         IList<Vehicle> GetAll();
         Vehicle Get(int id);
 
-        // DELETE
+        // Delete
         void Delete(Vehicle vehicle);
     }
 }

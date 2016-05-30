@@ -15,6 +15,15 @@ namespace VehicleWebService.API.Controllers
     public class VehiclesController : ApiController
     {
 
+        //Constructor for unit testing
+        private IVehicleRepository @object;
+
+        public VehiclesController(IVehicleRepository @object)
+        {
+            this.@object = @object;
+        }
+
+
         public IVehicleRepository VehicleRepository { get; set; }
 
 
