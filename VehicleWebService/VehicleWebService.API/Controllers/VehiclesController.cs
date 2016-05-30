@@ -1,4 +1,5 @@
 ﻿using StackExchange.Redis;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -76,6 +77,11 @@ namespace VehicleWebService.API.Controllers
         [ResponseType(typeof(Vehicle))]
         public HttpResponseMessage PostVehicle(Vehicle vehicle)
         {
+
+            //if (vehicle.Make == null || vehicle.Model == null)
+            //{
+            //    throw new Exception("Make and Model required.");
+            //}
 
             var result = VehicleRepository.Add(vehicle);
             return Request.CreateResponse(HttpStatusCode.Created, result);

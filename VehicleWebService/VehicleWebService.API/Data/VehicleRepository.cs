@@ -22,6 +22,9 @@ namespace VehicleWebService.API.Data
         {
             var typedClient = _redisClient.As<Vehicle>();
 
+            //Auto increment Id
+            vehicle.Id = (int)typedClient.GetNextSequence();
+
             return typedClient.Store(vehicle);
         }
 
