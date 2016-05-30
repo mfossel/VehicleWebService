@@ -78,10 +78,15 @@ namespace VehicleWebService.API.Controllers
         public HttpResponseMessage PostVehicle(Vehicle vehicle)
         {
 
-            //if (vehicle.Make == null || vehicle.Model == null)
-            //{
-            //    throw new Exception("Make and Model required.");
-            //}
+            if (vehicle.Make == null || vehicle.Model == null)
+            {
+                throw new Exception("Make and Model required.");
+            }
+
+            if (vehicle.Year < 1950 || vehicle.Year >2050)
+            {
+                throw new Exception("Vehicle year must be between 1950 and 2050.");
+            }
 
             var result = VehicleRepository.Add(vehicle);
             return Request.CreateResponse(HttpStatusCode.Created, result);
