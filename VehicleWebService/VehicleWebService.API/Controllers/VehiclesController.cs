@@ -18,19 +18,28 @@ namespace VehicleWebService.API.Controllers
 
 
         // GET: api/Vehicles
-        public IEnumerable<Vehicle> GetVehicles(string make, string model)
+        public IEnumerable<Vehicle> GetVehicles()
         {
-            IEnumerable<Vehicle> vehicles = VehicleRepository.GetAll();
 
-            // Check for Vehicle make input
-            if (!string.IsNullOrEmpty(make)) vehicles = vehicles.Where(v => v.Make == make);
+            return VehicleRepository.GetAll();
 
-            // Check for Vehicle model input
-            if (!string.IsNullOrEmpty(model)) vehicles = vehicles.Where(v => v.Model == model);
+        }
 
-                 return vehicles;
+        //public IEnumerable<Vehicle> GetVehicles(string make, string model)
+        //{
 
-            }
+        //    IEnumerable<Vehicle> vehicles = VehicleRepository.GetAll();
+
+        //    // Check for Vehicle make input
+        //    if (!string.IsNullOrEmpty(make)) vehicles = vehicles.Where(v => v.Make == make);
+
+        //    // Check for Vehicle model input
+        //    if (!string.IsNullOrEmpty(model)) vehicles = vehicles.Where(v => v.Model == model);
+
+        //    return vehicles;
+
+        //}
+
 
         // GET: api/Vehicles/5
         [ResponseType(typeof(Vehicle))]
@@ -58,7 +67,7 @@ namespace VehicleWebService.API.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-           vehicle.Id = id;
+            vehicle.Id = id;
             VehicleRepository.Add(vehicle);
             return Request.CreateResponse(HttpStatusCode.NoContent);
         }

@@ -12,7 +12,9 @@ namespace VehicleWebService.API
         public static void Register(HttpConfiguration config)
         {
 
-            config.EnableCors();
+            var rules = new EnableCorsAttribute("*", "*", "*");
+
+            config.EnableCors(rules);
 
             config.MapHttpAttributeRoutes();
 

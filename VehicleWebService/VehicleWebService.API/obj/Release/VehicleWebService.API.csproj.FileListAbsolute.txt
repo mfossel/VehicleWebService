@@ -76,3 +76,7 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.Web.Http.WebHost.xml
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Release\VehicleWebService.API.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Release\VehicleWebService.API.pdb
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\Microsoft.Azure.AppService.ApiApps.Service.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API\obj\Release\VehicleWebService.API.csprojResolveAssemblyReference.cache
