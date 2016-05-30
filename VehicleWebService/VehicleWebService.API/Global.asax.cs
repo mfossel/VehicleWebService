@@ -1,13 +1,13 @@
 ﻿using Autofac;
 using Autofac.Integration.WebApi;
 using ServiceStack.Redis;
-using System;
 using System.Reflection;
 using System.Web.Http;
 using VehicleWebService.API.Data;
 
 namespace VehicleWebService.API
 {
+
     public class WebApiApplication : System.Web.HttpApplication
     {
         public IRedisClientsManager ClientsManager;
@@ -21,7 +21,8 @@ namespace VehicleWebService.API
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             ConfigureDependencyResolver(GlobalConfiguration.Configuration);
 
-            GlobalConfiguration.Configuration.EnsureInitialized();
+         GlobalConfiguration.Configuration.EnsureInitialized();
+
         }
 
         private void ConfigureDependencyResolver(HttpConfiguration configuration)
