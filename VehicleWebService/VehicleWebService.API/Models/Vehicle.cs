@@ -1,9 +1,7 @@
-﻿
-using System.ComponentModel.DataAnnotations;
-
-namespace VehicleWebService.CORE
+﻿namespace VehicleWebService.CORE
 
 {
+
     public class Vehicle
     {
 
