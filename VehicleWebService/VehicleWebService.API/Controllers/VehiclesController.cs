@@ -14,15 +14,7 @@ namespace VehicleWebService.API.Controllers
 {
     public class VehiclesController : ApiController
     {
-
-        //Constructor for unit testing
-        private IVehicleRepository @object;
-
-        public VehiclesController(IVehicleRepository @object)
-        {
-            this.@object = @object;
-        }
-
+        public VehiclesController() { }
 
         public IVehicleRepository VehicleRepository { get; set; }
 
@@ -67,18 +59,17 @@ namespace VehicleWebService.API.Controllers
 
         // PUT: api/Vehicles/5
         [ResponseType(typeof(void))]
-        public HttpResponseMessage PutVehicle(int id, Vehicle vehicle)
+        public HttpResponseMessage PutVehicle(Vehicle vehicle)
         {
 
-            var existingEntity = VehicleRepository.Get(id);
+            var existingEntity = VehicleRepository.Get(vehicle.Id);
 
             if (existingEntity == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            vehicle.Id = id;
-            VehicleRepository.Add(vehicle);
+            VehicleRepository.Update(vehicle);
             return Request.CreateResponse(HttpStatusCode.NoContent);
         }
 

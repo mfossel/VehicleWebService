@@ -45,3 +45,5 @@ C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\bin\Relea
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\obj\Release\VehicleWebService.API.Tests.csprojResolveAssemblyReference.cache
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\obj\Release\VehicleWebService.API.Tests.dll
 C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\obj\Release\VehicleWebService.API.Tests.pdb
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\bin\Release\Autofac.Extras.Moq.dll
+C:\dev\VehicleWebService\VehicleWebService\VehicleWebService.API.Tests\bin\Release\Autofac.Extras.Moq.xml

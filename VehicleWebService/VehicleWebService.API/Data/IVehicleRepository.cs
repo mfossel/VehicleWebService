@@ -10,8 +10,11 @@ namespace VehicleWebService.API.Data
     public interface IVehicleRepository
     {
 
-        //Create, Update
+        //Create
         Vehicle Add(Vehicle vehicle);
+
+        //Update
+        Vehicle Update(Vehicle vehicle);
 
         //Read
         IList<Vehicle> GetAll();

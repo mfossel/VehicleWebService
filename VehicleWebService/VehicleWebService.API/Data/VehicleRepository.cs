@@ -28,6 +28,13 @@ namespace VehicleWebService.API.Data
             return typedClient.Store(vehicle);
         }
 
+        public Vehicle Update(Vehicle vehicle)
+        {
+            var typedClient = _redisClient.As<Vehicle>();
+
+            return typedClient.Store(vehicle);
+        }
+
 
         public Vehicle Get(int id)
         {
