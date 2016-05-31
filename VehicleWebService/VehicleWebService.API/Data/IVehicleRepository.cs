@@ -22,5 +22,6 @@ namespace VehicleWebService.API.Data
 
         // Delete
         void Delete(Vehicle vehicle);
+
     }
 }

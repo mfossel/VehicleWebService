@@ -44,6 +44,7 @@ namespace VehicleWebService.API.Controllers
         [ResponseType(typeof(Vehicle))]
         public IHttpActionResult GetVehicle(int id)
         {
+
             var vehicle = VehicleRepository.Get(id);
 
             if (vehicle == null)
@@ -52,6 +53,7 @@ namespace VehicleWebService.API.Controllers
             }
 
             return Ok(vehicle);
+
         }
 
         // PUT: api/Vehicles/5
@@ -68,6 +70,7 @@ namespace VehicleWebService.API.Controllers
 
             VehicleRepository.Update(vehicle);
             return Request.CreateResponse(HttpStatusCode.NoContent);
+
         }
 
         // POST: api/Vehicles
@@ -94,11 +97,13 @@ namespace VehicleWebService.API.Controllers
         [ResponseType(typeof(Vehicle))]
         public IHttpActionResult DeleteVehicle(int id)
         {
+
             var vehicle = VehicleRepository.Get(id);
 
             VehicleRepository.Delete(vehicle);
 
             return Ok(vehicle);
+
         }
 
     }

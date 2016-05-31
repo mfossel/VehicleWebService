@@ -56,9 +56,7 @@ namespace VehicleWebService.API.Data
 
             typedClient.Delete(vehicle);
 
-        }    
-
-
+        }   
 
     }
 }
