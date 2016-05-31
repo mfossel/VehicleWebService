@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -11,13 +12,20 @@ namespace VehicleWebService.API.Controllers
 {
     public class VehiclesController : ApiController
     {
+        private IVehicleRepository @object;
+
         public VehiclesController() { }
+
+        public VehiclesController(IVehicleRepository @object)
+        {
+            this.@object = @object;
+        }
 
         public IVehicleRepository VehicleRepository { get; set; }
 
 
         // GET: api/Vehicles
-        public IEnumerable<Vehicle> GetVehicles()
+        public IList<Vehicle> GetVehicles()
         {
 
             return VehicleRepository.GetAll();
@@ -58,7 +66,7 @@ namespace VehicleWebService.API.Controllers
 
         // PUT: api/Vehicles/5
         [ResponseType(typeof(void))]
-        public HttpResponseMessage PutVehicle(Vehicle vehicle)
+        public IHttpActionResult PutVehicle(Vehicle vehicle)
         {
 
             var existingEntity = VehicleRepository.Get(vehicle.Id);
@@ -69,13 +77,13 @@ namespace VehicleWebService.API.Controllers
             }
 
             VehicleRepository.Update(vehicle);
-            return Request.CreateResponse(HttpStatusCode.NoContent);
+            return StatusCode(HttpStatusCode.NoContent);
 
         }
 
         // POST: api/Vehicles
         [ResponseType(typeof(Vehicle))]
-        public HttpResponseMessage PostVehicle(Vehicle vehicle)
+        public IHttpActionResult PostVehicle(Vehicle vehicle)
         {
 
             if (vehicle.Make == null || vehicle.Model == null)
@@ -89,7 +97,7 @@ namespace VehicleWebService.API.Controllers
             }
 
             var result = VehicleRepository.Add(vehicle);
-            return Request.CreateResponse(HttpStatusCode.Created, result);
+            return CreatedAtRoute("DefaultApi", new { id = vehicle.Id }, vehicle);
 
         }
 
@@ -107,4 +115,5 @@ namespace VehicleWebService.API.Controllers
         }
 
     }
+
 }

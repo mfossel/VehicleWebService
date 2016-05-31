@@ -1,6 +1,8 @@
-﻿using Autofac.Extras.Moq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using System.Collections.Generic;
+using System.Net;
+using System.Web.Http;
 using System.Web.Http.Results;
 using VehicleWebService.API.Controllers;
 using VehicleWebService.API.Data;
@@ -11,91 +13,138 @@ namespace VehicleWebService.API.Tests.Controllers
     [TestClass]
     public class VehiclesControllerTests
     {
-        [TestMethod]
-        public void GetVehicleShouldReturnVehicle()
+        Mock<IVehicleRepository> _mockVehicleRepository;
+
+        VehiclesController controller;
+
+        [TestInitialize]
+        public void Initialize()
         {
-            // Arrange
 
-            //var _mockVehicleRepository = new Mock<IVehicleRepository>();
-            //_mockVehicleRepository.Setup(m => m.Get(1))
-            //                       .Returns(new Vehicle
-            //                       {
-            //                           Id = 1,
-            //                           Year = 2000,
-            //                           Make = "Subaru",
-            //                           Model = "Forrester"
-            //                       });
+            _mockVehicleRepository = new Mock<IVehicleRepository>();
 
-
-
-            //var controller = new VehiclesController(_mockVehicleRepository.Object);
-
-            //// Act
-            //var httpResponse = controller.GetVehicle(1);
-
-            //// Assert
-            //Assert.IsNotNull(httpResponse);
-
-            //OkNegotiatedContentResult<Vehicle> okHttpResponse = (OkNegotiatedContentResult<Vehicle>)httpResponse;
-            //Assert.IsNotNull(okHttpResponse);
-            //Assert.IsNotNull(okHttpResponse.Content);
-
-            //var domainVehicle = okHttpResponse.Content;
-
-            //Assert.AreEqual(domainVehicle.Id, 1);
+            controller = new VehiclesController(_mockVehicleRepository.Object);
 
         }
 
-        //    [TestMethod]
-        //    public void GetVehicleShouldReturnNotFound()
-        //    {
-        //        // Arrange
-        //        var _mockVehicleRepository = new Mock<IVehicleRepository>();
-        //        _mockVehicleRepository.Setup(m => m.Get(1))
-        //                               .Returns(new Vehicle
-        //                               {
-        //                                    Id = 1,
-        //                                    Year = 2000,
-        //                                    Make = "Subaru",
-        //                                    Model = "Forrester"
-        //                                });
+        [TestMethod]
+        public void GetVehiclesShouldReturnVehicles()
+        {
+            //Arrange
+            _mockVehicleRepository.Setup(m => m.GetAll())
+                     .Returns(new List<Vehicle>
+                          {
+                                         new Vehicle { Id = 1,
+                                                        Make =  "Honda",
+                                                        Model = "Civic",
+                                                        Year =  2000
+                                        },
+
+                                          new Vehicle { Id = 1,
+                                                        Make =  "Ford",
+                                                        Model = "Focus",
+                                                        Year =  2001 }
+                          });
+
+            // Act
+            var Vehicles = controller.GetVehicles();
+
+            // Assert
+            Assert.IsNotNull(Vehicles);
+
+            Assert.IsTrue(Vehicles.Count == 2);
+        }
+
+        [TestMethod]
+        public void GetVehiclesShouldReturnNotFound()
+        {
+            // Arrange
+            _mockVehicleRepository.Setup(m => m.GetAll())
+                                          .Returns(new List<Vehicle>
+                                          { });
+
+            // Act
+            var httpResponse = controller.GetVehicles();
+
+            // Assert
+            Assert.IsNotNull(httpResponse);
+            Assert.IsTrue(httpResponse.Count == 0);
+
+        }
+
+        [TestMethod]
+        public void GetVehicleShouldReturnVehicle()
+        {
+            //Arrange
+            _mockVehicleRepository.Setup(m => m.Get(1))
+                                  .Returns(new Vehicle
+                                  {
+                                      Id = 1,
+                                      Year = 2000,
+                                      Make = "Subaru",
+                                      Model = "Forrester"
+                                  });
+
+            // Act
+            var httpResponse = controller.GetVehicle(1);
+
+            // Assert
+            Assert.IsNotNull(httpResponse);
+
+            OkNegotiatedContentResult<Vehicle> okHttpResponse = (OkNegotiatedContentResult<Vehicle>)httpResponse;
+            Assert.IsNotNull(okHttpResponse);
+            Assert.IsNotNull(okHttpResponse.Content);
+
+            var domainResponse = okHttpResponse.Content;
+
+            Assert.AreEqual(domainResponse.Id, 1);
+        }
+
+        [TestMethod]
+        public void GetVehicleShouldReturnNotFound()
+        {
+            // Arrange
+            _mockVehicleRepository.Setup(m => m.Get(1))
+                                   .Returns(new Vehicle
+                                   {
+                                       Id = 1,
+                                       Year = 2000,
+                                       Make = "Subaru",
+                                       Model = "Forrester"
+                                   });
+
+            // Act
+            var httpResponse = controller.GetVehicle(2);
+
+            // Assert
+            Assert.IsNotNull(httpResponse);
+            Assert.IsInstanceOfType(httpResponse, typeof(NotFoundResult));
+        }
+
+        [TestMethod]
+        public void PutVehicleReturnStatusCode()
+        {
+            // Arrange
+            _mockVehicleRepository.Setup(m => m.Get(10))
+                                .Returns(new Vehicle
+                                {
+                                    Id = 1,
+                                    Year = 2000,
+                                    Make = "Subaru",
+                                    Model = "Forrester"
+                                });
 
 
-        //        var controller = new VehiclesController(_mockVehicleRepository.Object);
+            // Act
+            IHttpActionResult actionResult = controller.PutVehicle(new Vehicle { Id = 10, Model = "Chevy", Make = "Impala", Year =2004 });
+            var contentResult = actionResult as StatusCodeResult;
 
-        //        // Act
-        //        var httpResponse = controller.GetVehicle(2);
+            // Assert
+            _mockVehicleRepository.Verify(tr => tr.Update(It.IsAny<Vehicle>()), Times.Once);
 
-        //        // Assert
-        //        Assert.IsNotNull(httpResponse);
-        //        Assert.IsInstanceOfType(httpResponse, typeof(NotFoundResult));
-        //    }
-        //}
-
-        //[TestMethod]
-        //public void Test()
-        //{
-        //    using (var mock = AutoMock.GetLoose())
-        //    {
-        //        // Arrange - configure the mock
-        //        mock.Mock<IVehicleRepository>().Setup(x => x.Get(1)).Returns(new Vehicle
-        //        {
-        //            Id = 1,
-        //            Year = 2000,
-        //            Make = "Subaru",
-        //            Model = "Forrester"
-        //        });
-
-        //        var controller = mock.Create<VehiclesController>();
-
-        //        // Act
-        //        var httpResponse = controller.GetVehicle(2);
-
-        //        // Assert - assert on the mock
-        //        Assert.IsNotNull(httpResponse);
-        //        Assert.IsInstanceOfType(httpResponse, typeof(NotFoundResult));
-        //    }
-        //}
+            Assert.IsNotNull(contentResult);
+            Assert.IsTrue(contentResult.StatusCode == HttpStatusCode.NoContent);
+        }
 
     }
 

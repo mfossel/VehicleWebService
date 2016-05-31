@@ -21,6 +21,7 @@ namespace VehicleWebService.API
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
+
             );
 
             //SET API TO RETURN JSON INSTEAD OF XML
