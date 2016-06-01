@@ -11,6 +11,7 @@ Unit testing done with **Moq**
 
 
 ####API is hosted on Azure and can be accessed with the following URL
+(URL can be copied into test client)
 
 > https://vehiclewebserviceapi.azurewebsites.net/api/
 
