@@ -10,11 +10,10 @@ Data stored in **Redis Data Cache** on Azure Cloud
 Unit testing done with **Moq**
 
 
-####API is hosted on Azure and can be accessed with the following URL
-(URL can be copied into test client)
+####API is hosted on Azure and can be accessed with the following URL 
 
 > https://vehiclewebserviceapi.azurewebsites.net/api/
-
+(URL can be copied into test client)
 
 Alternatively it can be downloaded and compiled in Visual Studio for Unit Testing
 
