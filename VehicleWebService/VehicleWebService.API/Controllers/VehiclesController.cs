@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using VehicleWebService.API.Data;
@@ -12,23 +10,22 @@ namespace VehicleWebService.API.Controllers
 {
     public class VehiclesController : ApiController
     {
-        private IVehicleRepository @object;
 
         public VehiclesController() { }
 
-        public VehiclesController(IVehicleRepository @object)
+        public VehiclesController(IVehicleRepository vehicleRepository)
         {
-            this.@object = @object;
+            _vehicleRepository = vehicleRepository;
         }
 
-        public IVehicleRepository VehicleRepository { get; set; }
+        private readonly IVehicleRepository _vehicleRepository;
 
 
         // GET: api/Vehicles
         public IList<Vehicle> GetVehicles()
         {
 
-            return VehicleRepository.GetAll();
+            return _vehicleRepository.GetAll();
 
         }
 
@@ -53,7 +50,7 @@ namespace VehicleWebService.API.Controllers
         public IHttpActionResult GetVehicle(int id)
         {
 
-            var vehicle = VehicleRepository.Get(id);
+            var vehicle = _vehicleRepository.Get(id);
 
             if (vehicle == null)
             {
@@ -69,14 +66,14 @@ namespace VehicleWebService.API.Controllers
         public IHttpActionResult PutVehicle(Vehicle vehicle)
         {
 
-            var existingEntity = VehicleRepository.Get(vehicle.Id);
+            var existingEntity = _vehicleRepository.Get(vehicle.Id);
 
             if (existingEntity == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            VehicleRepository.Update(vehicle);
+            _vehicleRepository.Update(vehicle);
             return StatusCode(HttpStatusCode.NoContent);
 
         }
@@ -96,7 +93,7 @@ namespace VehicleWebService.API.Controllers
                 throw new Exception("Vehicle year must be between 1950 and 2050.");
             }
 
-            var result = VehicleRepository.Add(vehicle);
+            var result = _vehicleRepository.Add(vehicle);
             return CreatedAtRoute("DefaultApi", new { id = vehicle.Id }, vehicle);
 
         }
@@ -106,9 +103,9 @@ namespace VehicleWebService.API.Controllers
         public IHttpActionResult DeleteVehicle(int id)
         {
 
-            var vehicle = VehicleRepository.Get(id);
+            var vehicle = _vehicleRepository.Get(id);
 
-            VehicleRepository.Delete(vehicle);
+            _vehicleRepository.Delete(vehicle);
 
             return Ok(vehicle);
 
