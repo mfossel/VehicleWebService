@@ -7,7 +7,7 @@ Vehicle Web Service API
 - WebApi
 - Autofac
 
-Data stored in ** Redis Data Cache ** on Azure Cloud
+Data stored in **Redis Data Cache** on Azure Cloud
 
 Unit testing done with Moq
 
