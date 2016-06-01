@@ -1,6 +1,4 @@
-# VehicleWebService
-
-##Vehicle Web Service for Coding Challenge
+#Vehicle Web Service for Coding Challenge
 
 ####Vehicle Web Service API
 - ASP.NET
