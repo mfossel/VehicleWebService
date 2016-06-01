@@ -16,6 +16,7 @@ API is hosted on Azure and can be accessed with the following URL
 
 > https://vehiclewebserviceapi.azurewebsites.net/api/
 
-Also can be downloaded and compile in Vistual Studio for Unit Testing
+
+Alternatively it can be downloaded and compiled in Visual Studio for Unit Testing
 
 
