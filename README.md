@@ -3,9 +3,9 @@
 ##Vehicle Web Service for Coding Challenge
 
 Vehicle Web Service API
--ASP.Net
--WebApi
--Autofac
+- ASP.Net
+- WebApi
+- Autofac
 
 Data stored in Redis Data Cache on Azure Cloud
 
