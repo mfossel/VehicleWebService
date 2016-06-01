@@ -1,6 +1,5 @@
 ﻿using Autofac.Extras.Moq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using System.Collections.Generic;
 using System.Net;
 using System.Web.Http;
